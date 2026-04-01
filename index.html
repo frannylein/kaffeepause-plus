@@ -51,59 +51,32 @@
 
   .container { max-width:880px; margin:0 auto; padding:0 24px; position:relative; z-index:1; }
 
-  /* HEADER */
   header { padding:44px 0 36px; border-bottom:1px solid var(--border); margin-bottom:44px; }
   .header-inner { display:flex; align-items:flex-end; justify-content:space-between; gap:20px; flex-wrap:wrap; }
 
   .logo-block { display:flex; align-items:center; gap:14px; }
-  .logo-cup {
-    width:54px; height:54px; background:var(--cyan); border-radius:50%;
-    display:flex; align-items:center; justify-content:center; font-size:24px;
-    position:relative; flex-shrink:0;
-  }
-  .logo-plus {
-    position:absolute; top:-5px; right:-5px;
-    width:22px; height:22px; background:var(--orange); border-radius:50%;
-    display:flex; align-items:center; justify-content:center;
-    font-size:12px; font-weight:700; color:white;
-  }
+  .logo-cup { width:54px; height:54px; background:var(--cyan); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:24px; position:relative; flex-shrink:0; }
+  .logo-plus { position:absolute; top:-5px; right:-5px; width:22px; height:22px; background:var(--orange); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:12px; font-weight:700; color:white; }
   .logo-text h1 { font-family:'Fraunces',serif; font-size:32px; font-weight:400; letter-spacing:-.5px; color:var(--cyan-dark); line-height:1; }
   .logo-text p  { font-size:15px; color:var(--muted); margin-top:4px; font-weight:300; }
 
   .header-right { display:flex; align-items:center; gap:10px; flex-wrap:wrap; }
 
   .nav-tabs { display:flex; gap:3px; background:var(--peach); padding:4px; border-radius:var(--radius-sm); }
-  .nav-tab {
-    padding:8px 16px; border-radius:6px; font-size:14px; font-weight:400;
-    cursor:pointer; border:none; background:transparent; color:var(--muted);
-    transition:all .2s; font-family:'DM Sans',sans-serif;
-  }
+  .nav-tab { padding:8px 16px; border-radius:6px; font-size:14px; font-weight:400; cursor:pointer; border:none; background:transparent; color:var(--muted); transition:all .2s; font-family:'DM Sans',sans-serif; }
   .nav-tab.active { background:var(--white); color:var(--text); font-weight:500; box-shadow:0 1px 4px rgba(0,0,0,0.07); }
   .nav-tab:hover:not(.active) { color:var(--text); }
 
-  .admin-btn {
-    padding:8px 16px; border-radius:var(--radius-sm); font-size:14px; font-weight:500;
-    cursor:pointer; border:1px solid var(--border-mid); background:transparent; color:var(--muted);
-    font-family:'DM Sans',sans-serif; transition:all .15s; display:flex; align-items:center; gap:5px;
-  }
+  .admin-btn { padding:8px 16px; border-radius:var(--radius-sm); font-size:14px; font-weight:500; cursor:pointer; border:1px solid var(--border-mid); background:transparent; color:var(--muted); font-family:'DM Sans',sans-serif; transition:all .15s; display:flex; align-items:center; gap:5px; }
   .admin-btn:hover { background:var(--cyan-light); color:var(--cyan-dark); }
   .admin-btn.active-admin { background:var(--cyan); color:white; border-color:var(--cyan); }
 
-  /* VIEWS */
   .view { display:none; animation:fadeIn .3s ease; }
   .view.active { display:block; }
   @keyframes fadeIn { from{opacity:0;transform:translateY(6px)} to{opacity:1;transform:translateY(0)} }
 
-  /* NEXT HERO */
-  .next-hero {
-    background:var(--cyan); border-radius:var(--radius);
-    padding:44px 48px; color:white; position:relative; overflow:hidden; margin-bottom:28px;
-  }
-  .next-hero::before {
-    content:''; position:absolute; inset:0;
-    background:linear-gradient(135deg, rgba(242,143,59,0.25) 0%, transparent 60%);
-    pointer-events:none;
-  }
+  .next-hero { background:var(--cyan); border-radius:var(--radius); padding:44px 48px; color:white; position:relative; overflow:hidden; margin-bottom:28px; }
+  .next-hero::before { content:''; position:absolute; inset:0; background:linear-gradient(135deg, rgba(242,143,59,0.25) 0%, transparent 60%); pointer-events:none; }
   .next-hero::after { content:'☕'; position:absolute; right:44px; top:50%; transform:translateY(-50%); font-size:100px; opacity:.09; pointer-events:none; }
   .next-label { font-size:13px; font-weight:500; letter-spacing:.1em; text-transform:uppercase; color:var(--peach); margin-bottom:14px; position:relative; }
   .next-title { font-family:'Fraunces',serif; font-size:34px; font-weight:400; line-height:1.25; margin-bottom:6px; max-width:520px; position:relative; }
@@ -112,61 +85,46 @@
   .next-meta-item strong { color:white; font-weight:500; }
   .next-actions { margin-top:28px; display:flex; gap:10px; flex-wrap:wrap; position:relative; }
 
-  /* BUTTONS */
   .btn { padding:11px 22px; border-radius:var(--radius-sm); font-size:15px; font-weight:500; cursor:pointer; border:none; font-family:'DM Sans',sans-serif; transition:all .15s; display:inline-flex; align-items:center; gap:6px; }
-  .btn-orange  { background:var(--orange); color:white; }
+  .btn-orange { background:var(--orange); color:white; }
   .btn-orange:hover { background:#E07A28; transform:translateY(-1px); }
-  .btn-ghost   { background:rgba(255,255,255,.12); color:white; border:1px solid rgba(255,255,255,.25); }
-  .btn-ghost:hover { background:rgba(255,255,255,.2); }
   .btn-outline { background:transparent; color:var(--text); border:1px solid var(--border-mid); }
   .btn-outline:hover { background:var(--peach); }
   .btn-primary { background:var(--cyan); color:white; }
   .btn-primary:hover { background:var(--cyan-dark); transform:translateY(-1px); }
-  .btn-danger  { background:#FEE2E2; color:#B91C1C; border:none; }
+  .btn-danger { background:#FEE2E2; color:#B91C1C; border:none; }
   .btn-danger:hover { background:#FCA5A5; }
 
-  /* CARDS */
   .card { background:var(--card); border:1px solid var(--border); border-radius:var(--radius); padding:28px 32px; margin-bottom:20px; box-shadow:var(--shadow); }
+  .card-label { font-size:16px; font-weight:500; margin-bottom:18px; color:var(--cyan-dark); }
   .section-title { font-family:'Fraunces',serif; font-size:22px; font-weight:400; margin-bottom:18px; color:var(--cyan-dark); }
 
-  /* FORMS */
   .form-row { display:flex; gap:12px; flex-wrap:wrap; margin-bottom:14px; }
   .form-group { display:flex; flex-direction:column; gap:6px; flex:1; min-width:190px; }
   .form-group label { font-size:12px; font-weight:500; color:var(--muted); text-transform:uppercase; letter-spacing:.05em; }
-  .form-group input, .form-group textarea {
-    padding:11px 14px; border:1px solid var(--border-mid); border-radius:var(--radius-sm);
-    font-size:15px; font-family:'DM Sans',sans-serif; background:white; color:var(--text);
-    transition:border-color .15s; outline:none;
-  }
+  .form-group input, .form-group textarea { padding:11px 14px; border:1px solid var(--border-mid); border-radius:var(--radius-sm); font-size:15px; font-family:'DM Sans',sans-serif; background:white; color:var(--text); transition:border-color .15s; outline:none; }
   .form-group input:focus, .form-group textarea:focus { border-color:var(--orange); box-shadow:0 0 0 3px rgba(242,143,59,.12); }
   .form-group textarea { resize:vertical; min-height:80px; }
 
-  /* ATTENDEES */
   .attendee-list { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:18px; min-height:38px; }
-  .attendee-pill {
-    display:flex; align-items:center; gap:7px;
-    background:var(--peach); border:1px solid var(--peach-dark); border-radius:20px;
-    padding:6px 14px 6px 7px; font-size:14px; animation:popIn .2s ease;
-  }
+  .attendee-pill { display:flex; align-items:center; gap:7px; background:var(--peach); border:1px solid var(--peach-dark); border-radius:20px; padding:6px 14px 6px 7px; font-size:14px; animation:popIn .2s ease; }
   @keyframes popIn { from{transform:scale(.8);opacity:0} to{transform:scale(1);opacity:1} }
   .attendee-avatar { width:24px; height:24px; border-radius:50%; background:var(--orange); color:white; font-size:11px; font-weight:600; display:flex; align-items:center; justify-content:center; }
   .remove-att { background:none; border:none; cursor:pointer; color:var(--muted); font-size:16px; padding:0 0 0 3px; line-height:1; }
   .remove-att:hover { color:#B91C1C; }
 
-  /* SESSION CARDS */
   .sessions-grid { display:grid; gap:14px; }
   .session-card { background:var(--card); border:1px solid var(--border); border-radius:var(--radius); padding:24px 28px; display:flex; gap:20px; align-items:flex-start; box-shadow:var(--shadow); }
   .date-block { text-align:center; min-width:54px; background:var(--peach); border-radius:var(--radius-sm); padding:9px; flex-shrink:0; }
   .date-block .mo { font-size:11px; font-weight:500; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); }
   .date-block .dy { font-family:'Fraunces',serif; font-size:26px; font-weight:400; color:var(--orange-dark); line-height:1.1; }
   .s-info { flex:1; }
-  .s-topic   { font-family:'Fraunces',serif; font-size:18px; font-weight:400; color:var(--cyan-dark); margin-bottom:4px; }
+  .s-topic { font-family:'Fraunces',serif; font-size:18px; font-weight:400; color:var(--cyan-dark); margin-bottom:4px; }
   .s-speaker { font-size:14px; color:var(--muted); margin-bottom:8px; }
   .s-tags { display:flex; gap:6px; flex-wrap:wrap; }
   .tag { font-size:12px; padding:4px 10px; border-radius:20px; background:var(--cyan-light); color:var(--cyan-dark); font-weight:500; }
   .s-admin { display:flex; gap:6px; flex-shrink:0; }
 
-  /* IDEAS */
   .ideas-grid { display:grid; gap:12px; margin-bottom:24px; }
   .idea-card { background:var(--card); border:1px solid var(--border); border-radius:var(--radius); padding:20px 24px; display:flex; justify-content:space-between; align-items:flex-start; gap:16px; box-shadow:var(--shadow); }
   .idea-title { font-size:16px; font-weight:500; color:var(--cyan-dark); margin-bottom:4px; }
@@ -178,22 +136,15 @@
   .vc { font-size:16px; font-weight:500; color:var(--orange-dark); line-height:1; }
   .vl { font-size:11px; color:var(--muted); margin-top:2px; }
 
-  /* SPEAKER HERO */
-  .speaker-hero {
-    background:linear-gradient(135deg, var(--peach) 0%, #FFE8D8 100%);
-    border:1px solid var(--peach-dark); border-radius:var(--radius);
-    padding:36px 40px; margin-bottom:24px; text-align:center;
-  }
+  .speaker-hero { background:linear-gradient(135deg, var(--peach) 0%, #FFE8D8 100%); border:1px solid var(--peach-dark); border-radius:var(--radius); padding:36px 40px; margin-bottom:24px; text-align:center; }
   .speaker-hero h2 { font-family:'Fraunces',serif; font-size:30px; font-weight:400; color:var(--cyan-dark); margin-bottom:10px; }
   .speaker-hero p  { font-size:16px; color:var(--muted); max-width:480px; margin:0 auto 22px; line-height:1.6; }
   .rules-row { display:flex; gap:10px; justify-content:center; flex-wrap:wrap; }
   .rule-pill { display:flex; align-items:center; gap:7px; background:white; border:1px solid var(--border-mid); border-radius:20px; padding:7px 16px; font-size:13px; color:var(--muted); }
 
-  /* ADMIN PANEL */
   .admin-panel { background:var(--cyan-light); border:1px solid var(--cyan-mid); border-radius:var(--radius); padding:24px 28px; margin-bottom:24px; }
   .admin-panel-title { font-size:12px; font-weight:500; color:var(--cyan-dark); text-transform:uppercase; letter-spacing:.07em; margin-bottom:16px; }
 
-  /* MODAL */
   .modal-overlay { display:none; position:fixed; inset:0; background:rgba(0,0,0,.35); z-index:100; align-items:center; justify-content:center; }
   .modal-overlay.open { display:flex; }
   .modal { background:white; border-radius:var(--radius); padding:36px; max-width:420px; width:90%; box-shadow:0 20px 60px rgba(0,0,0,.15); animation:fadeIn .2s ease; }
@@ -201,17 +152,19 @@
   .modal p  { font-size:15px; color:var(--muted); margin-bottom:22px; line-height:1.5; }
   .modal-actions { display:flex; gap:8px; justify-content:flex-end; margin-top:22px; }
 
-  /* MISC */
   .count-badge { display:inline-flex; align-items:center; justify-content:center; min-width:18px; height:18px; background:var(--orange); color:white; border-radius:9px; font-size:11px; font-weight:600; padding:0 5px; margin-left:4px; }
+
   .toast { position:fixed; bottom:24px; right:24px; background:var(--cyan-dark); color:white; padding:13px 20px; border-radius:var(--radius-sm); font-size:15px; display:none; align-items:center; gap:8px; z-index:999; box-shadow:0 4px 20px rgba(0,0,0,.15); animation:slideUp .3s ease; }
   .toast.show { display:flex; }
   @keyframes slideUp { from{transform:translateY(10px);opacity:0} to{transform:translateY(0);opacity:1} }
+
   .empty { text-align:center; padding:48px 24px; color:var(--muted); }
   .empty .big { font-size:42px; margin-bottom:12px; }
   .empty p { font-size:15px; line-height:1.6; }
 
-  /* card label */
-  .card-label { font-size:16px; font-weight:500; margin-bottom:18px; color:var(--cyan-dark); }
+  .loading { text-align:center; padding:32px; color:var(--muted); font-size:15px; }
+  .loading::after { content:''; display:inline-block; width:16px; height:16px; border:2px solid var(--peach-dark); border-top-color:var(--orange); border-radius:50%; animation:spin .7s linear infinite; margin-left:8px; vertical-align:middle; }
+  @keyframes spin { to { transform:rotate(360deg); } }
 
   @media(max-width:620px) {
     .next-hero { padding:28px 24px; }
@@ -247,7 +200,7 @@
 
   <!-- HOME -->
   <div class="view active" id="view-home">
-    <div id="next-block"></div>
+    <div id="next-block"><div class="loading">Wird geladen</div></div>
 
     <div class="admin-panel" id="panel-next" style="display:none">
       <div class="admin-panel-title">🔑 Nächste Session bearbeiten</div>
@@ -261,8 +214,8 @@
         <div class="form-group"><label>Ort</label><input id="e-loc" type="text"></div>
       </div>
       <div style="display:flex;gap:8px">
-        <button class="btn btn-primary" onclick="saveNext()">Speichern</button>
-        <button class="btn btn-outline" onclick="clearAttendees()">Anmeldeliste leeren</button>
+        <button class="btn btn-primary" onclick="saveSession()">Speichern</button>
+        <button class="btn btn-outline" onclick="clearAnmeldungen()">Anmeldeliste leeren</button>
       </div>
     </div>
 
@@ -294,12 +247,12 @@
       </div>
       <button class="btn btn-primary" onclick="addPast()">Hinzufügen</button>
     </div>
-    <div class="sessions-grid" id="past-list"></div>
+    <div id="past-list"><div class="loading">Wird geladen</div></div>
   </div>
 
   <!-- IDEAS -->
   <div class="view" id="view-ideas">
-    <div class="ideas-grid" id="ideas-list"></div>
+    <div id="ideas-list"><div class="loading">Wird geladen</div></div>
     <div class="card">
       <div class="card-label">Neue Idee einreichen 💡</div>
       <div class="form-row">
@@ -335,7 +288,7 @@
       <button class="btn btn-primary" onclick="addSpeaker()">Anmelden</button>
     </div>
     <div class="section-title">In der Warteschlange 🎤</div>
-    <div class="sessions-grid" id="spk-list"></div>
+    <div id="spk-list"><div class="loading">Wird geladen</div></div>
   </div>
 
 </div>
@@ -360,211 +313,277 @@
 <div class="toast" id="toast"><span>✓</span><span id="toast-msg"></span></div>
 
 <script>
-// ── Passwörter für die zwei Admins (hier ändern!) ──────────────────────────
+// ── Config ─────────────────────────────────────────────────────────────────
+const API = 'https://script.google.com/macros/s/AKfycbyAkd8JAML-vkN0RgGwGxJ8qYenHFQHsspViA78pfqjc1ashZ7y0aMDR4JWi7ZdfEm0/exec';
 const PASSWORDS = ['kaffeepause2026', 'marketing2026'];
 
-const K = { next:'kp_next5', att:'kp_att5', past:'kp_past5', ideas:'kp_ideas5', spk:'kp_spk5' };
-let admin = false;
+let admin  = false;
+let state  = { session:{}, anmeldungen:[], ideen:[], speaker:[] };
+let voted  = JSON.parse(localStorage.getItem('kp_voted') || '[]');
 
-const D = {
-  next: { topic:'Wie ich meinen Arbeitstag um meinen Fokus strukturiere', speaker:'Franny', date:'15. Oktober 2026', time:'10:00 – 10:20 Uhr', location:'Zoom + Büro Zürich' },
-  past: [
-    { id:1, mo:'Aug', dy:'21', topic:'5 Canva-Tricks die uns jede Woche Zeit sparen', speaker:'Nina', tags:['Design','Workflow'] },
-    { id:2, mo:'Jul', dy:'10', topic:'Was ich nach 3 Monaten SEA gelernt habe', speaker:'Marco', tags:['SEA','Kampagne'] },
-    { id:3, mo:'Jun', dy:'12', topic:'Inbox Zero — mein System für den Posteingang', speaker:'Sara', tags:['Produktivität','Workflow'] },
-  ],
-  ideas: [
-    { id:1, title:'Kampagnentexte mit KI in drei Sprachen', author:'Nina', desc:'Workflow DE → FR → IT ohne Qualitätsverlust', votes:5, voted:false },
-    { id:2, title:'Google Analytics 4 — was wirklich zählt', author:'Marco', desc:'Die 5 Kennzahlen auf die es ankommt', votes:3, voted:false },
-    { id:3, title:'Mein Prompt-Notizbuch aus dem Alltag', author:'Sara', desc:'Gesammelte Prompts für Marketing-Aufgaben', votes:2, voted:false },
-    { id:4, title:'Retargeting erklärt — für alle im Team', author:'Anonym', desc:'Was passiert eigentlich nach dem Klick?', votes:1, voted:false },
-  ],
-  spk: [
-    { id:1, name:'Nina', email:'', topic:'Content-Kalender mit Notion aufbauen', month:'November 2026', desc:'Wie ich den Überblick über alle Kanäle behalte' },
-  ],
-  att: []
-};
+// ── API ────────────────────────────────────────────────────────────────────
+async function apiGet() {
+  const res  = await fetch(API + '?action=getAll');
+  const data = await res.json();
+  return data;
+}
 
-function get(k)    { try { return JSON.parse(localStorage.getItem(k)) } catch { return null } }
-function set(k, v) { localStorage.setItem(k, JSON.stringify(v)) }
-function seed()    { Object.keys(D).forEach(k => { if (!get(K[k])) set(K[k], D[k]) }) }
+async function apiPost(payload) {
+  await fetch(API, {
+    method: 'POST',
+    body: JSON.stringify(payload)
+  });
+}
 
-function showView(name) {
-  document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
-  document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
-  document.getElementById('view-'+name).classList.add('active');
-  document.querySelectorAll('.nav-tab')[['home','past','ideas','speaker'].indexOf(name)].classList.add('active');
-  render();
+// ── Load & Render ──────────────────────────────────────────────────────────
+async function loadAll() {
+  try {
+    const data = await apiGet();
+    state.session     = data.session     || {};
+    state.anmeldungen = data.anmeldungen || [];
+    state.ideen       = data.ideen       || [];
+    state.speaker     = data.speaker     || [];
+    render();
+  } catch(e) {
+    toast('Fehler beim Laden — bitte neu laden');
+  }
 }
 
 function render() {
-  renderNext(); renderAtt(); renderPast(); renderIdeas(); renderSpk();
-  document.getElementById('past-count').textContent  = (get(K.past)||[]).length;
-  document.getElementById('ideas-count').textContent = (get(K.ideas)||[]).length;
+  renderNext();
+  renderAtt();
+  renderPast();
+  renderIdeas();
+  renderSpk();
+  document.getElementById('past-count').textContent  = state.speaker.length;
+  document.getElementById('ideas-count').textContent = state.ideen.length;
   document.getElementById('panel-next').style.display = admin ? 'block' : 'none';
   document.getElementById('panel-past').style.display = admin ? 'block' : 'none';
   document.getElementById('admin-btn').classList.toggle('active-admin', admin);
 }
 
 function renderNext() {
-  const n = get(K.next) || D.next;
+  const n = state.session;
   document.getElementById('next-block').innerHTML = `
     <div class="next-hero">
       <div class="next-label">☕ Nächste Kaffeepause+</div>
-      <div class="next-title">${n.topic}</div>
+      <div class="next-title">${n.Thema || n.topic || 'Thema folgt'}</div>
       <div class="next-meta">
-        <div class="next-meta-item">🎤 <strong>${n.speaker}</strong></div>
-        <div class="next-meta-item">📅 <strong>${n.date}</strong></div>
-        <div class="next-meta-item">🕙 <strong>${n.time}</strong></div>
-        <div class="next-meta-item">📍 <strong>${n.location}</strong></div>
+        <div class="next-meta-item">🎤 <strong>${n.Speaker || n.speaker || '?'}</strong></div>
+        <div class="next-meta-item">📅 <strong>${n.Datum || n.date || '?'}</strong></div>
+        <div class="next-meta-item">🕙 <strong>${n.Uhrzeit || n.time || '?'}</strong></div>
+        <div class="next-meta-item">📍 <strong>${n.Ort || n.location || '?'}</strong></div>
       </div>
       <div class="next-actions">
         <button class="btn btn-orange" onclick="document.querySelector('.card').scrollIntoView({behavior:'smooth',block:'center'})">☕ Ich bin dabei</button>
       </div>
     </div>`;
   if (admin) {
-    document.getElementById('e-topic').value   = n.topic;
-    document.getElementById('e-speaker').value = n.speaker;
-    document.getElementById('e-date').value    = n.date;
-    document.getElementById('e-time').value    = n.time;
-    document.getElementById('e-loc').value     = n.location;
+    document.getElementById('e-topic').value   = n.Thema    || n.topic    || '';
+    document.getElementById('e-speaker').value = n.Speaker  || n.speaker  || '';
+    document.getElementById('e-date').value    = n.Datum    || n.date     || '';
+    document.getElementById('e-time').value    = n.Uhrzeit  || n.time     || '';
+    document.getElementById('e-loc').value     = n.Ort      || n.location || '';
   }
 }
 
 function renderAtt() {
-  const list = get(K.att) || [];
+  const list = state.anmeldungen;
   document.getElementById('att-count').textContent = list.length ? `(${list.length})` : '';
   document.getElementById('att-list').innerHTML = list.length
-    ? list.map((a,i) => `
+    ? list.map(a => `
         <div class="attendee-pill">
-          <div class="attendee-avatar">${ini(a.name)}</div>
-          ${a.name}
-          ${admin ? `<button class="remove-att" onclick="removeAtt(${i})">×</button>` : ''}
+          <div class="attendee-avatar">${ini(a.Name || a.name || '?')}</div>
+          ${a.Name || a.name}
+          ${admin ? `<button class="remove-att" onclick="removeAtt('${a.Name || a.name}')">×</button>` : ''}
         </div>`).join('')
     : '<span style="font-size:15px;color:var(--muted)">Noch niemand angemeldet — seid ihr dabei? ☕</span>';
 }
 
 function renderPast() {
-  const list = get(K.past) || [];
+  const list = state.speaker;
   document.getElementById('past-list').innerHTML = list.length
-    ? list.slice().reverse().map(s => `
+    ? `<div class="sessions-grid">${list.slice().reverse().map(s => `
       <div class="session-card">
-        <div class="date-block"><div class="mo">${s.mo}</div><div class="dy">${s.dy}</div></div>
-        <div class="s-info">
-          <div class="s-topic">${s.topic}</div>
-          <div class="s-speaker">mit ${s.speaker}</div>
-          <div class="s-tags">${(s.tags||[]).map(t=>`<span class="tag">${t}</span>`).join('')}</div>
+        <div class="date-block">
+          <div class="mo">${s.Monat || s.mo || '?'}</div>
+          <div class="dy">${s.Tag   || s.dy || '?'}</div>
         </div>
-        ${admin ? `<div class="s-admin"><button class="btn btn-danger" style="padding:7px 12px;font-size:13px" onclick="delPast(${s.id})">Löschen</button></div>` : ''}
-      </div>`).join('')
+        <div class="s-info">
+          <div class="s-topic">${s.Thema || s.topic || ''}</div>
+          <div class="s-speaker">mit ${s.Name || s.speaker || ''}</div>
+          <div class="s-tags">${(s.Tags||s.tags||'').toString().split(',').filter(Boolean).map(t=>`<span class="tag">${t.trim()}</span>`).join('')}</div>
+        </div>
+        ${admin ? `<div class="s-admin"><button class="btn btn-danger" style="padding:7px 12px;font-size:13px" onclick="delPast('${s.Thema||s.topic}')">Löschen</button></div>` : ''}
+      </div>`).join('')}</div>`
     : `<div class="empty"><div class="big">☕</div><p>Noch keine vergangenen Sessions.</p></div>`;
 }
 
 function renderIdeas() {
-  const list = get(K.ideas) || [];
+  const list = state.ideen;
   document.getElementById('ideas-list').innerHTML = list.length
-    ? list.slice().sort((a,b)=>b.votes-a.votes).map(x => `
-      <div class="idea-card">
-        <div style="flex:1"><div class="idea-title">${x.title}</div><div class="idea-meta">von ${x.author}${x.desc?' · '+x.desc:''}</div></div>
-        <div style="display:flex;gap:6px;align-items:center;flex-shrink:0">
-          <button class="vote-btn ${x.voted?'voted':''}" onclick="vote(${x.id})">
-            <span class="vc">${x.votes}</span><span class="vl">${x.voted?'✓':'↑'}</span>
-          </button>
-          ${admin ? `<button class="btn btn-danger" style="padding:7px 11px;font-size:13px" onclick="delIdea(${x.id})">×</button>` : ''}
-        </div>
-      </div>`).join('')
+    ? `<div class="ideas-grid">${list.slice().sort((a,b)=>(parseInt(b.Votes||b.votes||0))-(parseInt(a.Votes||a.votes||0))).map(x => {
+        const title  = x.Titel || x.title || '';
+        const author = x.Autor || x.author || '';
+        const desc   = x.Beschreibung || x.desc || '';
+        const votes  = parseInt(x.Votes || x.votes || 0);
+        const isVoted = voted.includes(title);
+        return `
+          <div class="idea-card">
+            <div style="flex:1">
+              <div class="idea-title">${title}</div>
+              <div class="idea-meta">von ${author}${desc?' · '+desc:''}</div>
+            </div>
+            <div style="display:flex;gap:6px;align-items:center;flex-shrink:0">
+              <button class="vote-btn ${isVoted?'voted':''}" onclick="vote('${title}', ${isVoted})">
+                <span class="vc">${votes}</span>
+                <span class="vl">${isVoted?'✓':'↑'}</span>
+              </button>
+              ${admin ? `<button class="btn btn-danger" style="padding:7px 11px;font-size:13px" onclick="delIdea('${title}')">×</button>` : ''}
+            </div>
+          </div>`}).join('')}</div>`
     : `<div class="empty"><div class="big">💡</div><p>Noch keine Ideen — reiche die erste ein!</p></div>`;
 }
 
 function renderSpk() {
-  const list = get(K.spk) || [];
+  const list = state.speaker;
   document.getElementById('spk-list').innerHTML = list.length
-    ? list.map(s => `
+    ? `<div class="sessions-grid">${list.map(s => `
       <div class="session-card">
-        <div class="date-block"><div class="mo" style="font-size:10px">${(s.month||'').split(' ')[0]||'?'}</div><div class="dy" style="font-size:20px">🎤</div></div>
-        <div class="s-info">
-          <div class="s-topic">${s.topic}</div>
-          <div class="s-speaker">mit ${s.name}${s.month?' · '+s.month:''}</div>
-          ${s.desc ? `<div class="idea-meta" style="margin-top:5px">${s.desc}</div>` : ''}
+        <div class="date-block">
+          <div class="mo" style="font-size:10px">${(s.Monat||s.month||'').split(' ')[0]||'?'}</div>
+          <div class="dy" style="font-size:20px">🎤</div>
         </div>
-        ${admin ? `<div class="s-admin"><button class="btn btn-danger" style="padding:7px 12px;font-size:13px" onclick="delSpk(${s.id})">Löschen</button></div>` : ''}
-      </div>`).join('')
+        <div class="s-info">
+          <div class="s-topic">${s.Thema || s.topic || ''}</div>
+          <div class="s-speaker">mit ${s.Name || s.name || ''}${(s.Monat||s.month) ? ' · '+(s.Monat||s.month) : ''}</div>
+          ${(s.Beschreibung||s.desc) ? `<div class="idea-meta" style="margin-top:5px">${s.Beschreibung||s.desc}</div>` : ''}
+        </div>
+        ${admin ? `<div class="s-admin"><button class="btn btn-danger" style="padding:7px 12px;font-size:13px" onclick="delSpk('${s.Name||s.name}','${s.Thema||s.topic}')">Löschen</button></div>` : ''}
+      </div>`).join('')}</div>`
     : `<div class="empty"><div class="big">🎤</div><p>Noch keine Speaker angemeldet — trau dich!</p></div>`;
 }
 
-function register() {
+// ── Actions ────────────────────────────────────────────────────────────────
+async function register() {
   const name = document.getElementById('r-name').value.trim();
   const email = document.getElementById('r-email').value.trim();
   if (!name) { toast('Bitte deinen Namen eingeben 👋'); return; }
-  const list = get(K.att) || [];
-  if (list.find(a => a.name.toLowerCase()===name.toLowerCase())) { toast('Du bist schon dabei! ☕'); return; }
-  list.push({name,email,ts:Date.now()});
-  set(K.att,list);
+  if (state.anmeldungen.find(a => (a.Name||a.name||'').toLowerCase()===name.toLowerCase())) {
+    toast('Du bist schon dabei! ☕'); return;
+  }
   document.getElementById('r-name').value='';
   document.getElementById('r-email').value='';
   toast('Super, du bist dabei! ☕');
-  renderAtt();
+  await apiPost({ action:'anmelden', name, email });
+  await loadAll();
 }
 
-function removeAtt(i) { const l=get(K.att)||[]; l.splice(i,1); set(K.att,l); renderAtt(); }
-function clearAttendees() { if(!confirm('Anmeldeliste wirklich leeren?')) return; set(K.att,[]); toast('Anmeldeliste geleert ✓'); renderAtt(); }
+async function removeAtt(name) {
+  await apiPost({ action:'deleteAnmeldung', name });
+  await loadAll();
+}
 
-function saveNext() {
-  set(K.next, {
-    topic:    document.getElementById('e-topic').value.trim()||'Thema folgt',
-    speaker:  document.getElementById('e-speaker').value.trim()||'?',
-    date:     document.getElementById('e-date').value.trim()||'?',
-    time:     document.getElementById('e-time').value.trim()||'?',
-    location: document.getElementById('e-loc').value.trim()||'?',
+async function clearAnmeldungen() {
+  if (!confirm('Anmeldeliste wirklich leeren?')) return;
+  await apiPost({ action:'clearAnmeldungen' });
+  toast('Anmeldeliste geleert ✓');
+  await loadAll();
+}
+
+async function saveSession() {
+  await apiPost({
+    action:   'saveSession',
+    topic:    document.getElementById('e-topic').value.trim(),
+    speaker:  document.getElementById('e-speaker').value.trim(),
+    date:     document.getElementById('e-date').value.trim(),
+    time:     document.getElementById('e-time').value.trim(),
+    location: document.getElementById('e-loc').value.trim(),
   });
-  toast('Session gespeichert ✓'); renderNext();
+  toast('Session gespeichert ✓');
+  await loadAll();
 }
 
-function addPast() {
-  const topic=document.getElementById('p-topic').value.trim();
-  const speaker=document.getElementById('p-speaker').value.trim();
+async function addPast() {
+  const topic   = document.getElementById('p-topic').value.trim();
+  const speaker = document.getElementById('p-speaker').value.trim();
   if (!topic||!speaker) { toast('Thema und Speaker ausfüllen'); return; }
-  const list=get(K.past)||[];
-  list.push({id:Date.now(), mo:document.getElementById('p-month').value.trim(), dy:document.getElementById('p-day').value.trim(), topic, speaker, tags:document.getElementById('p-tags').value.split(',').map(t=>t.trim()).filter(Boolean)});
-  set(K.past,list);
+  await apiPost({
+    action: 'addPast',
+    topic, speaker,
+    mo:   document.getElementById('p-month').value.trim(),
+    dy:   document.getElementById('p-day').value.trim(),
+    tags: document.getElementById('p-tags').value.trim(),
+  });
   ['p-topic','p-speaker','p-month','p-day','p-tags'].forEach(id=>document.getElementById(id).value='');
-  toast('Hinzugefügt ✓'); renderPast(); document.getElementById('past-count').textContent=(get(K.past)||[]).length;
+  toast('Hinzugefügt ✓');
+  await loadAll();
 }
 
-function delPast(id) { set(K.past,(get(K.past)||[]).filter(s=>s.id!==id)); renderPast(); document.getElementById('past-count').textContent=(get(K.past)||[]).length; }
+async function delPast(topic) {
+  await apiPost({ action:'deleteSpeaker', topic });
+  await loadAll();
+}
 
-function addIdea() {
-  const title=document.getElementById('i-title').value.trim();
+async function addIdea() {
+  const title = document.getElementById('i-title').value.trim();
   if (!title) { toast('Bitte ein Thema eingeben 💡'); return; }
-  const list=get(K.ideas)||[];
-  list.push({id:Date.now(), title, author:document.getElementById('i-author').value.trim()||'Anonym', desc:document.getElementById('i-desc').value.trim(), votes:0, voted:false});
-  set(K.ideas,list);
+  await apiPost({
+    action: 'idee',
+    title,
+    author: document.getElementById('i-author').value.trim() || 'Anonym',
+    desc:   document.getElementById('i-desc').value.trim(),
+  });
   ['i-title','i-author','i-desc'].forEach(id=>document.getElementById(id).value='');
-  toast('Idee eingereicht! 💡'); renderIdeas();
+  toast('Idee eingereicht! 💡');
+  await loadAll();
 }
 
-function delIdea(id) { set(K.ideas,(get(K.ideas)||[]).filter(x=>x.id!==id)); renderIdeas(); }
-
-function vote(id) {
-  const list=get(K.ideas)||[];
-  const x=list.find(i=>i.id===id); if(!x) return;
-  x.voted?(x.votes--,x.voted=false):(x.votes++,x.voted=true);
-  set(K.ideas,list); renderIdeas();
+async function vote(title, wasVoted) {
+  const delta = wasVoted ? -1 : 1;
+  if (wasVoted) { voted = voted.filter(v=>v!==title); }
+  else { voted.push(title); }
+  localStorage.setItem('kp_voted', JSON.stringify(voted));
+  await apiPost({ action:'vote', title, delta });
+  await loadAll();
 }
 
-function addSpeaker() {
-  const name=document.getElementById('sp-name').value.trim();
-  const topic=document.getElementById('sp-topic').value.trim();
+async function delIdea(title) {
+  await apiPost({ action:'deleteIdee', title });
+  await loadAll();
+}
+
+async function addSpeaker() {
+  const name  = document.getElementById('sp-name').value.trim();
+  const topic = document.getElementById('sp-topic').value.trim();
   if (!name||!topic) { toast('Name und Thema ausfüllen bitte 🎤'); return; }
-  const list=get(K.spk)||[];
-  list.push({id:Date.now(), name, email:document.getElementById('sp-email').value.trim(), topic, month:document.getElementById('sp-month').value.trim(), desc:document.getElementById('sp-desc').value.trim()});
-  set(K.spk,list);
+  await apiPost({
+    action: 'speaker',
+    name,
+    email: document.getElementById('sp-email').value.trim(),
+    topic,
+    month: document.getElementById('sp-month').value.trim(),
+    desc:  document.getElementById('sp-desc').value.trim(),
+  });
   ['sp-name','sp-email','sp-topic','sp-month','sp-desc'].forEach(id=>document.getElementById(id).value='');
-  toast('Du stehst auf der Speaker-Liste! 🎤'); renderSpk();
+  toast('Du stehst auf der Speaker-Liste! 🎤');
+  await loadAll();
 }
 
-function delSpk(id) { set(K.spk,(get(K.spk)||[]).filter(s=>s.id!==id)); renderSpk(); }
+async function delSpk(name, topic) {
+  await apiPost({ action:'deleteSpeaker', name: name+topic });
+  await loadAll();
+}
 
+// ── Views ──────────────────────────────────────────────────────────────────
+function showView(name) {
+  document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
+  document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('view-'+name).classList.add('active');
+  document.querySelectorAll('.nav-tab')[['home','past','ideas','speaker'].indexOf(name)].classList.add('active');
+}
+
+// ── Admin ──────────────────────────────────────────────────────────────────
 function toggleAdmin() {
   if (admin) { admin=false; toast('Admin-Modus beendet'); render(); return; }
   document.getElementById('modal').classList.add('open');
@@ -576,19 +595,21 @@ function closeModal() {
   document.getElementById('pw-err').style.display='none';
 }
 function checkPw() {
-  const pw=document.getElementById('pw-input').value;
+  const pw = document.getElementById('pw-input').value;
   if (PASSWORDS.includes(pw)) { admin=true; closeModal(); toast('Willkommen, Admin! 🔑'); render(); }
   else { document.getElementById('pw-err').style.display='block'; document.getElementById('pw-input').value=''; document.getElementById('pw-input').focus(); }
 }
 
-function ini(n) { return n.split(' ').map(x=>x[0]).join('').toUpperCase().slice(0,2); }
+// ── Helpers ────────────────────────────────────────────────────────────────
+function ini(n) { return (n||'?').split(' ').map(x=>x[0]).join('').toUpperCase().slice(0,2); }
 function toast(msg) {
   document.getElementById('toast-msg').textContent=msg;
   const el=document.getElementById('toast');
   el.classList.add('show'); setTimeout(()=>el.classList.remove('show'),3000);
 }
 
-seed(); render();
+// ── Start ──────────────────────────────────────────────────────────────────
+loadAll();
 </script>
 </body>
 </html>
